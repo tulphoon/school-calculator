@@ -1,7 +1,7 @@
 expression = input('>>> ')
 expression = expression.replace('(', ' ( ').replace(')', ' ) ').split()
 
-operators = '*/+-'
+operators = '^*/+-'
 stack = []
 output = []
 
@@ -22,12 +22,6 @@ for token in expression:
             while stack[-1] != '(':
                 output.append(stack.pop())
             stack.pop()
-    """
-    print('token: ' + str(token))
-    print('output: ' + str(output))
-    print('stack: ' + str(stack))
-    print('stack size: ' + str(len(stack)))
-    """
 
 while len(stack) > 0:
     output.append(stack.pop())

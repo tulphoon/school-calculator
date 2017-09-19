@@ -20,6 +20,10 @@ int eval(std::string op, int a, int b) {
   } else if (op == "*") {
     result = a * b;
   } else if (op == "/") {
+    if (b == 0) {
+      std::cout << "Cannot divide by zero" << '\n';
+      std::exit(EXIT_FAILURE);
+    }
     result = a / b;
   } else if (op == "+") {
     result = a + b;

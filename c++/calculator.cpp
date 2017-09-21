@@ -112,6 +112,11 @@ std::vector<std::string> split(std::string str) {
 
   replaceAll(str, "(", " ( ");
   replaceAll(str, ")", " ) ");
+  replaceAll(str, "^", " ^ ");
+  replaceAll(str, "*", " * ");
+  replaceAll(str, "/", " / ");
+  replaceAll(str, "+", " + ");
+  replaceAll(str, "-", " - ");
 
   std::stringstream ss(str);
   std::istream_iterator<std::string> begin(ss);
